@@ -3,29 +3,21 @@ import { mediaQuery } from "../../helpers/styleHelper";
 import { Link } from "react-router-dom";
 import { DiApple } from "react-icons/di";
 
-export const Wrapper = styled.div`
-  /* ${mediaQuery.mobile`
-        background-color: orange;
-  `}
-
-  ${mediaQuery.tablet`
-        background-color: yellow;
-  `}
-
-   ${mediaQuery.desktop`
-        background-color: green;
-   `} */
+export const NavWrapper = styled.div`
+  background-color: #101522;
+  height: 60px;
+  /* padding-top: 3px; */
 `;
 
 export const Nav = styled.nav`
-  background-color: #101522;
-  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1.2rem;
+  font-size: 20px;
   max-width: 1140px;
+  margin: auto;
+  height: 100%;
 `;
 
 export const NavbarContainer = styled.div`
@@ -33,7 +25,7 @@ export const NavbarContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  margin: 0px 15px;
+  margin: 0px 25px;
 `;
 
 export const NavLogo = styled(Link)`
@@ -41,7 +33,7 @@ export const NavLogo = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   display: flex;
-  font-size: 2rem;
+  font-size: 20px;
   align-items: center;
 `;
 
@@ -55,7 +47,7 @@ export const LogoText = styled.span`
 export const NavIcon = styled(DiApple)`
   display: flex;
   align-items: center;
-  border-bottom: 3px solid transparent;
+  /* border-bottom: 3px solid transparent; */
 `;
 
 export const MobileIcon = styled.div`
@@ -63,7 +55,7 @@ export const MobileIcon = styled.div`
 
   ${mediaQuery.mobile`
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 20px;
   `}
 
   ${mediaQuery.tablet`
@@ -83,33 +75,36 @@ export const NavMenu = styled.ul`
       flex-direction:column;
       background-color: #101522;
       width:100%;
-      height: 90vh;
-      top:70px;
+      height: 100vh;
+      top:60px;
       position:absolute;
       left: ${({ click }) => (click ? 0 : `-100%`)};
       transition: all 0.5s ease;
       opacity:1;
+      padding:10px 30px;
   `}
 
   ${mediaQuery.tablet`
-    width:50%;
+    width:75%;
     justify-content: space-between;
   `}
 
   ${mediaQuery.desktop`
-    width:40%;
+    width:60%;
     justify-content: space-between;
   `}
 `;
 
 export const NavItem = styled.li`
-  height: 70px;
   list-style: none;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
+  height: 65px;
+  /* border-bottom: 3px solid transparent; */
+  padding: 5px 0px;
 
   &:hover {
-    border-bottom: 3px solid orange;
+    /* border-bottom: 3px solid orange; */
+    /* border-bottom-left-radius: 3px; */
   }
 
   ${mediaQuery.mobile`
@@ -117,7 +112,7 @@ export const NavItem = styled.li`
 
     &:hover {
         background-color: #111829;
-        border-bottom: 3px solid transparent;
+        // border-bottom: 3px solid transparent;
     }
   `}
 `;
