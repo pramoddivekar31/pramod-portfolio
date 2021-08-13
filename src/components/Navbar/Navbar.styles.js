@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { mediaQuery } from "../../helpers/styleHelper";
 import { Link } from "react-router-dom";
-import { DiApple } from "react-icons/di";
+import { GiCursedStar } from "react-icons/gi";
 
 export const NavWrapper = styled.div`
   background-color: #101522;
   height: 60px;
+  position: sticky;
   /* padding-top: 3px; */
 `;
 
@@ -44,7 +45,7 @@ export const LogoText = styled.span`
   align-items: center;
 `;
 
-export const NavIcon = styled(DiApple)`
+export const NavIcon = styled(GiCursedStar)`
   display: flex;
   align-items: center;
   /* border-bottom: 3px solid transparent; */
@@ -102,11 +103,6 @@ export const NavItem = styled.li`
   /* border-bottom: 3px solid transparent; */
   padding: 5px 0px;
 
-  &:hover {
-    /* border-bottom: 3px solid orange; */
-    /* border-bottom-left-radius: 3px; */
-  }
-
   ${mediaQuery.mobile`
     width:100%;
 
@@ -125,4 +121,24 @@ export const NavLinks = styled(Link)`
   text-align: center;
   justify-content: center;
   height: 100%;
+
+  /* &:hover {
+    color: #7510f7;
+  } */
+`;
+
+export const Container = styled.div`
+  height: 100px;
+
+  ${mediaQuery.desktop`
+    background-color: red;
+  `}
+
+  ${mediaQuery.tablet`
+    background-color: yellow;
+  `}
+
+  ${mediaQuery.mobile`
+    background-color: white;
+  `}
 `;

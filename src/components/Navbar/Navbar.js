@@ -23,6 +23,7 @@ const Navbar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
+
         <NavWrapper>
           <Nav>
             <NavbarContainer>

@@ -1,4 +1,6 @@
 import Navbar from "./components/Navbar";
+import Homepage from "./components/Homepage";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./helpers/globalStyle";
 
@@ -8,7 +10,9 @@ function App() {
       <Router>
         <GlobalStyle />
         <Navbar />
-        <Switch>{/* <Route></Route> */}</Switch>
+        <Switch>
+          <Route exact to="/" component={Homepage} />
+        </Switch>
       </Router>
     </div>
   );

@@ -11,14 +11,14 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Button = styled.button`
-  border-radius: 10px;
+  border-radius: 5px;
   white-space: nowrap;
-  border: 2px solid orange;
-  background-color: #101522;
+  color: #fff;
+  border: 2px solid #7510f7;
+  background-color: #7510f7;
   outline: none;
   padding: 5px 15px;
   font-size: 15px;
-  color: orange;
   cursor: pointer;
 
   ${mediaQuery.mobile`
@@ -27,11 +27,11 @@ export const Button = styled.button`
     font-size: 20px
   `}
 
-  &:hover {
-    background-color: orange;
-    color: #fff;
-    transition: all 0.3s ease-out;
-  }
+  ${mediaQuery.desktop`
+    color:#fff;
+    border: 2px solid #7510f7;
+    background-color: #7510f7;
+  `}
 `;
 
 export default GlobalStyle;
